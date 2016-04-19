@@ -1,3 +1,6 @@
+# Author: coderjelly
+# Script in Python imlementing MERGE SORT
+
 import sys
 
 def MergeSort(A,p,q):

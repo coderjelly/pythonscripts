@@ -1,3 +1,5 @@
+# Author: coderjelly
+# Basic Node definition in python using classes
 
 class Node:
 	'basic Node definition'
