@@ -1,5 +1,5 @@
-
-
+# Author: coderjelly
+# Script in Python demonstrating CountingSort
 
 # k is the max val (min is 0) of any number in tha unsorted array A
 # final sorted array rests in B
