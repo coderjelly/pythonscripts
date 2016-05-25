@@ -5,7 +5,7 @@ import heapq
 
 y = [1,4,3,-2,0,9,11,8]
 
-
+x = [1,4,3,-2,0,9,11,8]
 #method 1
 heapq.heapify(y)
 
