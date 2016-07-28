@@ -1,5 +1,23 @@
-# Given a value V, if we want to make change for V cents, 
-# and we have infinite supply of each of C = { C1, C2, .. , Cm} 
-# valued coins, what is the minimum number of coins to make the change?
+# Given a value N, if we want to make change for N cents, and we have 
+# infinite supply of each of S = { S1, S2, .. , Sm} valued coins,
+# how many ways can we make the change? The order of coins doesnt matter.
+# For example, for N = 4 and S = {1,2,3}, there are four solutions: 
+# {1,1,1,1},{1,1,2},{2,2},{1,3}. So output should be 4. For N = 10 and 
+# S = {2, 5, 3, 6}, there are five solutions: {2,2,2,2,2}, {2,2,3,3}, 
+# {2,2,6}, {2,3,5} and {5,5}. So the output should be 5.
 
-def minCoins()
+
+def minCoins(N,S):
+
+	f = [0]*(N+1)
+
+	f[0] = 1
+
+	for v in S:
+		for i in xrange(N+1):
+			if v <= i:
+				f[i] += f[i-v]
+
+	return f
+
+print minCoins(4,[1,2,3])

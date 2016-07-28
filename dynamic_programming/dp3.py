@@ -27,7 +27,7 @@ def CountSteps(k,n):
 	return f
 
 
-s = 4
+s = 5
 m = 2
 print CountSteps(m,s)
 		
