@@ -34,4 +34,4 @@ def interleave(prefix,str1,str2):
 	interleave(newPrefix,str1,str2[1:])
 
 
-interleave("","AB","CD")
+interleave("","ABX","CDY")

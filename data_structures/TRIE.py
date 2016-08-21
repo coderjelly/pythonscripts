@@ -29,6 +29,20 @@ class TrieNode:
 
 		return words
 
+	#return all words with this prefix
+	def getWordsWithPrefix(self,pref,idx=0):
+		l = len(pref)
+		c = pref[idx]
+		if idx < l - 1:
+			if c in self.nodes:
+				return self.nodes[c].getWordsWithPrefix(pref,idx+1)
+			else:
+				return []
+		else:
+			if c in self.nodes:
+				return self.nodes[c].getAll()
+			else:
+				return []
 
 sentence = "the holidayer this that hol holi holiday thyme theatre thistle home throat"
 
@@ -40,3 +54,4 @@ for w in arr:
 	root.add(w)
 
 print root.getAll()
+print root.getWordsWithPrefix("ho")
