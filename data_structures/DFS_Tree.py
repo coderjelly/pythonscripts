@@ -35,7 +35,7 @@ def inorder(nod):
 	if nod is None:
 		return
 	inorder(nod.left)
-	print nod.data
+	print(nod.data)
 	inorder(nod.right)
 
 # postorder
@@ -44,9 +44,9 @@ def postorder(nod):
 		return	
 	postorder(nod.left)
 	postorder(nod.right)
-	print nod.data
+	print(nod.data)
 
 
 inorder(root)
-print "\n"
+print("\n")
 postorder(root)
